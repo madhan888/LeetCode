@@ -6,7 +6,7 @@ public:
         
         int n = s.length();
         string result = "";
-        string final = "";
+        
         
         for(int i =0 ; i<n ; i++){
             if(st.empty() || st.top()!= s[i]){
@@ -24,12 +24,10 @@ public:
             st.pop();
         }
         
-        int m = result.length();
-        for(int i = m-1;i >=0 ;i--){
-            final.push_back(result[i]);
-        }
+        reverse(result.begin() , result.end());
         
-        return final;
+        
+        return result;
         
     }
 };
